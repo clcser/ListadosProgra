@@ -25,67 +25,14 @@ P2: Escriba la implementación de las siguientes funciones en lenguaje C:
     liberarEquipos que recibe el puntero a un arreglo de tipo Equipo y su dimensión y lo libera.
 */
 
+#ifndef P2_H
+#define P2_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-
-// esto es de la pregunta anterior //
-
-enum posicion {
-    Arquero,
-    Defensor,
-    Medio,
-    Delantero,
-};
-
-enum rol {
-    DT,
-    PreparadorArqueros,
-    PreparadorFisico,
-    Asistente,
-    Fisioterapeuta,
-    Doctor,
-};
-
-struct Fanatico {
-    char nombre[100];
-    unsigned char edad;
-    double agresividad;
-};
-
-struct Jugador {
-    char nombre[100];
-    unsigned char edad;
-    enum posicion posicion;
-    float regate;
-    float defensa;
-    float reflejos;
-    float velocidad;
-    float dureza;
-    float resistencia;
-};
-
-struct Staff {
-    char nombre[100];
-    unsigned char edad;
-    enum rol rol;
-    unsigned char experiencia;
-};
-
-struct Equipo {
-    char nombre[100];
-    unsigned int anyoFundacion;
-    struct Staff *staff;
-    int numStaff[6];
-    struct Jugador *jugadores;
-    int numJugadores[4];
-    struct Fanatico *fanaticos;
-    int numFanaticos;
-};
-
-//////////////////////// AQUI EMPIEZA ESTA PREGUNTA ///////////////////////////
-
+#include "p1.h"
 
 // crear vector de fanaticos aleatorios
 struct Fanatico *crearFanaticos(int numFanaticos) {
@@ -247,6 +194,8 @@ void liberarEquipos(struct Equipo *equipos, int numEquipos) {
     }
     free(equipos);
 }
+
+#endif //P2_H
 
 /*
 int main() {

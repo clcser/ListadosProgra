@@ -6,7 +6,7 @@ P7: Escriba una función recursiva que reciba una cadena de caracteres y su tama
 o no
 */
 
-
+// devuelve 1 si es palindromo y 0 si no lo es
 int esPalindromo(char *palabra, int tam) {
     if(tam == 1 || tam == 2)
         return 1;

@@ -5,10 +5,12 @@ solucion propia
 Escriba una función llamada imprimiDB que reciba un puntero a un vector de Equipos e imprima toda la información
 de los equipos por pantalla.
 */
+#ifndef P4_H
+#define P4_H
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "p2.h"
+#include "p3.h"
 
 void imprimirFanaticos(struct Fanatico *fanatico, int *numFanaticos) {
     for(int i = 0; i < *numFanaticos; i++) {
@@ -107,7 +109,9 @@ void imprimiDB(struct Equipo *equipo, int numEquipos) {
     }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
+#endif //P4_H
+
+/*
 
 int main() {
     int numEquipos;
@@ -122,3 +126,4 @@ int main() {
     
     return 0;
 }
+*/

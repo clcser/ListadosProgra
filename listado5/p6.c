@@ -6,7 +6,7 @@ P6: Escriba una función recursiva que reciba una cade de caracteres, su tamaño
 devuelva el número de apariciones del caracter de referencia
 */
 
-
+// REVISAR //////////////////////
 int cuentaRepeticiones(char *palabra, int tam, char c) {
     if(tam == 1)
         return 0;
@@ -15,7 +15,7 @@ int cuentaRepeticiones(char *palabra, int tam, char c) {
         return cuentaRepeticiones(palabra+1,tam-1,c) + 1;
 
     else
-        return cuentaRepeticiones(palabra+1,tam-1,c);
+        return cuentaRepeticiones(palabra+1,tam-1,c); // tam-2????
 }
 
 
