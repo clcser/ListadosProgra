@@ -239,7 +239,12 @@ struct Equipo *crearEquipos(int numEquipos) {
 }
 
 // liberar equipos
-void liberarEquipos(struct Equipo *equipos, int numEquipos) { // REVISAR ESTO!
+void liberarEquipos(struct Equipo *equipos, int numEquipos) { 
+    for(int i = 0; i < numEquipos; i++) {
+        liberarStaff(equipos[i].staff);
+        liberarFanaticos(equipos[i].fanaticos);
+        liberarJugadores(equipos[i].jugadores);
+    }
     free(equipos);
 }
 
